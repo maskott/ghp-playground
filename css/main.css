@@ -1,7 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
-    font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
