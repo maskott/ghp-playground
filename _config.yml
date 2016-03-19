@@ -1,3 +1,9 @@
 name: Mike Skott
 gems:
   - jemoji
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      title: "maskott.github.io" 
