@@ -1,9 +1,10 @@
 name: Mike Skott
 gems:
   - jemoji
+  - jekyll-gist
 defaults:
   -
     scope:
       path: ""
     values:
-      title: "maskott.github.io" 
+      title: "maskott.github.io"
