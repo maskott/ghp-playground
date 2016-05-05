@@ -27,13 +27,14 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="{{ site.github.url }}"><i class="fa fa-flask"></i></a>
+				      <a class="navbar-brand" href="{{ '/' | prepend: site.github.url }}"><i class="fa fa-flask"></i></a>
 				    </div>
 
 				    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
-				        <li><a href="{{ site.github.url }}">Home</a></li>
+				        <li><a href="{{ '/' | prepend: site.github.url }}">Home</a></li>
+								<li><a href="{{ '/tips' | prepend: site.github.url }}">Jekyll Tips</a></li>
 				        <li><a href="{{ '/contact' | prepend: site.github.url }}">Contact</a></li>
 				      </ul>
 				    </div><!-- /.navbar-collapse -->
