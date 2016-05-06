@@ -9,6 +9,7 @@
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | prepend: site.github.url | replace: 'http://', '//' }}">
       <link href='https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway' rel='stylesheet' type='text/css'>
+			<!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-yxFy3Tt84CcGRj9UI7RA25hoUMpUPoFzcdPtK3hBdNgEGnh9FdKgMVM+lbAZTKN2" crossorigin="anonymous"> -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 			<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
@@ -17,37 +18,44 @@
 		<body>
 			<div class="container">
 				<br />
-				<nav class="navbar navbar-default">
-				  <div class="container-fluid">
-				    <!-- Brand and toggle get grouped for better mobile display -->
-				    <div class="navbar-header">
-				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-				      <a class="navbar-brand" href="{{ '/' | prepend: site.github.url }}"><i class="fa fa-flask"></i></a>
-				    </div>
-
-				    <!-- Collect the nav links, forms, and other content for toggling -->
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul class="nav navbar-nav">
-				        <li><a href="{{ '/' | prepend: site.github.url }}">Home</a></li>
-								<li><a href="{{ '/tips' | prepend: site.github.url }}">Jekyll Tips</a></li>
-				        <li><a href="{{ '/contact' | prepend: site.github.url }}">Contact</a></li>
-				      </ul>
-				    </div><!-- /.navbar-collapse -->
-				  </div><!-- /.container-fluid -->
-				</nav>
-				<div class="container">
-
-				{{ content }}
-
-				</div><!-- /.container -->
-				<footer class="text-center">
-				  Congratulations, you've made it to the year {{ site.time | date: '%Y' }}.
-				</footer>
+				<div class="row">
+					<nav class="navbar navbar-inverse">
+					  <div class="container-fluid">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					      <a class="navbar-brand" href="{{ '/' | prepend: site.github.url }}"><i class="fa fa-flask"></i></a>
+					    </div>
+							{% assign current = page.url | downcase | split: '/' %}
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      <ul class="nav navbar-nav">
+					        <li{% if current[1] == nil %} class='active'{% endif %}><a href="{{ '/' | prepend: site.github.url }}">Home</a></li>
+									<li{% if current[1] == 'tips' %} class='active'{% endif %}><a href="{{ '/tips' | prepend: site.github.url }}">Jekyll Tips</a></li>
+					        <li{% if current[1] == 'contact' %} class='active'{% endif %}><a href="{{ '/contact' | prepend: site.github.url }}">Contact</a></li>
+					      </ul>
+					    </div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+				</div>
+				<div class="row">
+					<div class="page-header text-center">
+					  <h1>{{ page.title }}</h1>
+					</div>
+				</div>
+				<div class="row">
+					{{ content }}
+				</div>
+				<div class="row">
+					<footer class="text-center">
+					  Congratulations, you've made it to the year {{ site.time | date: '%Y' }}.
+					</footer>
+				</div>
 			</div>
 		</body>
 	</html>
