@@ -38,3 +38,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+  background-image: inherit;
+}
