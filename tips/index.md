@@ -13,3 +13,8 @@ For instance:
     ```
 
 - {% assign openTag = '{%' %}To escape double curly brackets while writing code examples like the one above, use `{{ openTag }} raw %}` and `{{ openTag }} endraw %}` around the code.
+
+- Some important variables:
+
+  - `site.pages`: Holds each page on the site and all related info.
+  - `site.data`: {{ site.data }}
