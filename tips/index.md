@@ -18,6 +18,7 @@ For instance:
 
   - `site.pages`: Holds actual content of each page on the site and all related info.
   - `site.data`: Any `.yml`, `.csv`, or `.json` data loaded from files in the `_data/` path.
+  
 
 - As seen in [this StackOverflow](http://stackoverflow.com/questions/24098792/how-to-force-github-pages-build) you can use the following to make an empty commit and trigger a Jekyll rebuild in Github Pages. *It may still take a few miniutes to build.*
 ```sh
