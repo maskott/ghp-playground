@@ -17,4 +17,5 @@ For instance:
 - Some important variables:
 
   - `site.pages`: Holds each page on the site and all related info.
+    Sample value: {{site.pages}}
   - `site.data`: Any `.yml`, `.csv`, or `.json` data loaded from files in the `_data/` path.
