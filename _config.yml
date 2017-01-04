@@ -2,6 +2,7 @@ name: Mike Skott
 gems:
   - jemoji
   - jekyll-gist
+  - jekyll-last-modified-at
 defaults:
   -
     scope:
