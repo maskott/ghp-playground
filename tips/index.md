@@ -26,3 +26,5 @@ git commit -m 'rebuild pages' --allow-empty
 ```
 
 - Last Modified at: {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
+
+  - *(requires '- jekyll-last-modified-at' under gems in `_config.yml`)* 
